@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	config.vm.box = "generic/rhel7"
+	config.vm.network "private_network", ip: "192.168.33.17"
+	#config.vm.network :forwarded_port, guest: 22, host: 1234
+	config.vm.hostname = "ASLOWEB"
+	config.vm.synced_folder "shared", "/sterling"
+	#config.vm.provision "shell", path: "config.sh"
+	config.vm.provider "virtualbox" do |v|
+		v.memory = 256
+		v.cpus = 1
+	end
+end

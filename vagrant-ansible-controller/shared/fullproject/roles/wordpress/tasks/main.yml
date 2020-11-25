@@ -13,7 +13,7 @@
   when: wp_zipped.stat.exists == False
 
 - name: Check if Wordpress is previosuly Unzipped
-  stat: path="{{ wp_webserver_path }}" 
+  stat: path="{{ wp_webserver_path }}/wordpress" 
   register: wp_decompress
 
 - name: Unzip Wordpress

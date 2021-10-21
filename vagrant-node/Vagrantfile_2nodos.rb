@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	#se define el bloque multimaquina
 	config.vm.define "node-one" do |app|
 		app.vm.box = "bento/ubuntu-16.04"
-		app.vm.network "private_network", ip: "192.168.33.11"
+		app.vm.network "private_network", ip: "192.168.33.8"
 		app.vm.hostname = "node-one"
 		app.vm.provision "shell", path: "config.sh"
 		app.vm.provider "virtualbox" do |v|
@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	end
 	config.vm.define "node-two" do |app|
 		app.vm.box = "bento/ubuntu-16.04"
-		app.vm.network "private_network", ip: "192.168.33.12"
+		app.vm.network "private_network", ip: "192.168.33.9"
 		app.vm.hostname = "node-two"
 		app.vm.provision "shell", path: "config.sh"
 		app.vm.provider "virtualbox" do |v|

@@ -7,3 +7,4 @@ sudo apt-get install virtualbox-guest-dkms -y
 sleep 5
 
 sudo sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
+sudo service ssh restart

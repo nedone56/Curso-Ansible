@@ -22,4 +22,5 @@ sudo apt-get install ansible -y
 sleep 5
 
 sudo sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
+sudo service ssh restart
 

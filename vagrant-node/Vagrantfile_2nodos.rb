@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	#se define el bloque multimaquina
 	config.vm.define "node-one" do |app|
-		app.vm.box = "bento/ubuntu-16.04"
+		app.vm.box = "bento/ubuntu-20.04"
 		app.vm.network "private_network", ip: "192.168.33.8"
 		app.vm.hostname = "node-one"
 		app.vm.provision "shell", path: "config.sh"

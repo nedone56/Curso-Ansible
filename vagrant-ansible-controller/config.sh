@@ -11,7 +11,7 @@ sleep 10
 #sudo apt remove ansible -y
 #sudo apt --purge autoremove -y
 
-sudo apt-get update -y
+#sudo apt-get update -y
 #sudo apt upgrade -y
 #sudo apt -y install software-properties-common
 #sudo apt-add-repository -y ppa:ansible/ansible
@@ -22,4 +22,3 @@ sleep 5
 
 sudo sed -i 's/prohibit-password/yes/g' /etc/ssh/sshd_config
 sudo service ssh restart
-
